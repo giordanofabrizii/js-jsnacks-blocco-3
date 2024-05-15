@@ -5,7 +5,7 @@ let array = [];
 
 while (array.length != 6) {
     let number = Number.parseInt(prompt("ciao, inserisci un numero"));
-    if (number % 2 == 1) {
+    if (Number.isNaN(number) !== true && number % 2 == 1) {
         array.push(number);
     }
 }
