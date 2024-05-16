@@ -1,19 +1,32 @@
 // Dare la possibilità di inserire due parole. Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
 
-function confronta(stringaUno, stringaDue) {
-    if (stringaUno.length === stringaDue.length) {
-        console.log(stringaUno, stringaDue);
-    } else if (stringaDue.length > stringaUno.length) {
-        console.log(stringaDue);
-    } else {
-        console.log(stringaUno)
-    }
+//  ! funzione sbagliata
+
+// function confronta(stringaUno, stringaDue) {
+//     if (stringaUno.length === stringaDue.length) {
+//         console.log(stringaUno, stringaDue);
+//     } else if (stringaDue.length > stringaUno.length) {
+//         console.log(stringaDue);
+//     } else {
+//         console.log(stringaUno)
+//     }
+// }
+
+//  < funzione corretta
+function confronta(stringaUno, stringaDue){
+    return(stringaUno.length === stringaDue.length);
 }
 
 let testoA = "ciao";
 let testoB = "sono piu lungo";
 
-confronta(testoA, testoB);
+if (confronta(testoA, testoB)) {
+    console.log(testoA, testoB)
+} else if (stringaDue.length > stringaUno.length) {
+        console.log(stringaDue);
+    } else {
+        console.log(stringaUno)
+    }
 
 function controllaCaratteri(stringaUno, stringaDue) {
     if (stringaUno.length === stringaDue.length) { // se sono uguali di lunghezza
