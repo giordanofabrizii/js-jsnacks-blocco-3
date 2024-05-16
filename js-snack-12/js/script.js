@@ -22,10 +22,10 @@ let testoB = "sono piu lungo";
 
 if (confronta(testoA, testoB)) {
     console.log(testoA, testoB)
-} else if (stringaDue.length > stringaUno.length) {
-        console.log(stringaDue);
+} else if (testoB.length > testoA.length) {
+        console.log(testoB);
     } else {
-        console.log(stringaUno)
+        console.log(testoA)
     }
 
 function controllaCaratteri(stringaUno, stringaDue) {
@@ -53,3 +53,30 @@ let testoC = "ciao";
 let testoD = "ciao";
 
 controllaCaratteri(testoC, testoD);
+
+function controllaCaratteriWhile(stringaUno, stringaDue) {
+    if (stringaUno.length === stringaDue.length) { // se sono uguali di lunghezza
+
+        let uguaglianza = true;
+
+        let index = 0;
+
+        while (index < stringaDue.length) {
+            if (stringaDue[index] != stringaUno[index]) {
+                uguaglianza = false;
+            }
+
+            index++
+        }
+
+        if (uguaglianza) { // se sono uguali
+            console.log("sono uguali in tutto e per tutto");
+        } else { // se hanno qualche carattere diverso
+            console.log("sono lunghe uguali, ma sono diverse nei caratteri")
+        }
+    } else {
+        console.log("sono di diversa lunghezza");
+    }
+}
+
+controllaCaratteriWhile(testoC, testoD);
