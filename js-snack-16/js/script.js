@@ -88,3 +88,23 @@ let dieselCars = cars.filter((car) => {
         return false;
     }
 });
+
+let benzaCars = cars.filter((car) => {
+    if (car.alimentazione == 'Benzina') {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+let otherCars = cars.filter((car) => {
+    if (car.alimentazione != 'Diesel' && car.alimentazione != 'Benzina') {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+console.log(dieselCars);
+console.log(benzaCars);
+console.log(otherCars);
