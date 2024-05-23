@@ -66,7 +66,7 @@ persone.forEach((persona) => {
     } else {
         abilita = 'non puo';
     }
-    let stringa = `${persona.nome} ${persona.cognome} ha ${persona.eta} quindi ${abilita} guidare`;
+    let stringa = `${persona.nome} ${persona.cognome} ha ${persona.eta} anni quindi ${abilita} guidare`;
 
     console.log(stringa)
 });
