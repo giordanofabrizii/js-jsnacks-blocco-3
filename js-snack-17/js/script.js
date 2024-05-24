@@ -51,21 +51,10 @@ const persone = [
     }
 ];
 
-// Crea un array di oggetti che rappresentano delle persone, 10.
-// Ogni persona ha un nome, un cognome e un'età.
-
-// Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
-
-
 let patente = [];
 
 persone.forEach((persona) => {
-    let abilita = '';
-    if (persona.eta >= 18 && persona.eta <= 80) {
-        abilita = 'puo'
-    } else {
-        abilita = 'non puo';
-    }
+    const abilita = persona.eta >= 18 ? 'può' : 'non può';
     let stringa = `${persona.nome} ${persona.cognome} ha ${persona.eta} anni quindi ${abilita} guidare`;
 
     console.log(stringa)
