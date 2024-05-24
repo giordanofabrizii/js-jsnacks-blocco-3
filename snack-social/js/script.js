@@ -24,12 +24,28 @@ const tabs = [
     { nome: "Reddit", tipo: "forum" },
     { nome: "Netflix", tipo: "video streaming" }
 ];
-
-const nomiTabs = tabs.map(tab => tab.nome);
-
-const browser = {
-    'tab' : nomiTabs,
-    activeTab : 3
+const chrome = {
+    'tab' : tabs,
+    activeTab : 0
 };
 
+function closeSocials(browser) {
+    let nomi = [...browser.tab];
+    
+    console.log(nomi)
 
+    nomi.forEach( tabAperta => {
+        if (tabAperta.tipo == "social network") {
+            let index = tabs.indexOf(tabAperta);
+            tabs.splice(index, 1);
+
+            if (browser.activeTab == index) {
+                browser.activeTab += 1;
+            }
+        }
+    });
+};
+
+closeSocials(chrome);
+
+console.log(chrome)
