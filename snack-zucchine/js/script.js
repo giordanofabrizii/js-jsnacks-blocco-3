@@ -16,12 +16,30 @@ const zucchine = [
     { varieta: 'Patisson', peso: 387, lunghezza: 29 }
 ];
 
-let pesoTotale = 0
-
+let pesoTotale = 0;
 let zucchineGrandi = [];
-let zucchineGrandissime = []
-zucchine.forEach(zucchina) {
-    pesoTotale += zucchina.peso
+let zucchineGrandissime = [];
 
-    if
-}
+zucchine.forEach(zucchina => {
+    pesoTotale += zucchina.peso;
+
+    if (zucchina.lunghezza > 8) {
+        zucchineGrandissime.push(zucchina)
+    } else {
+        zucchineGrandi.push(zucchina);
+    }
+})
+
+let sommaGrandi = 0;
+let sommaGrandissimi = 0;
+zucchineGrandi.forEach(zucchina => {
+    sommaGrandi += zucchina.peso;
+})
+
+zucchineGrandissime.forEach(zucchina => {
+    sommaGrandissimi += zucchina.peso;
+})
+
+console.log(pesoTotale)
+console.log(sommaGrandi)
+console.log(sommaGrandissimi)
