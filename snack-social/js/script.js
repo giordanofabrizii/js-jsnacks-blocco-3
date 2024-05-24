@@ -31,17 +31,15 @@ const chrome = {
 
 function closeSocials(browser) {
     let nomi = [...browser.tab];
-    
+
     console.log(nomi)
 
-    nomi.forEach( tabAperta => {
-        if (tabAperta.tipo == "social network") {
+    nomi.forEach( (tabAperta, index) => {
+        if (tabAperta.tipo == "social network" && index == browser.activeTab) {
             let index = tabs.indexOf(tabAperta);
             tabs.splice(index, 1);
 
-            if (browser.activeTab == index) {
                 browser.activeTab += 1;
-            }
         }
     });
 };
